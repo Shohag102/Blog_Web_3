@@ -1,0 +1,11 @@
+<!--templates/logout.html-->
+{% extends 'base.html' %}
+{% block content %}
+<h3><a>Log out</a></h3>
+<h3><a><form action="{%url 'logout' %}" method="post">{%csrf_token%}
+    <button type="submit">Log Out</button>
+</form></a></h3>
+{%endblock content%}
+<!-- The above whole thing is required as the security issue becomes a major concern nowadys. 
+ instead of using just auth for logging out we have to manually create a function of logout view and then have to 
+ give its urls in the project section not in the app sections. -->

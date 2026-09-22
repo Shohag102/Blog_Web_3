@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.views.generic import ListView,DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
 from .models import Blog
 
@@ -31,3 +33,7 @@ class BlogDeleteView(DeleteView):
     model = Blog 
     template_name = 'blog_delete.html'
     success_url = reverse_lazy('home')
+
+def custom_logout_view(request):
+    logout(request)
+    return redirect('login')

@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from blog_8app.views import custom_logout_view
+
 urlpatterns = [
     path('eight/', admin.site.urls),
+    path('accounts/logout/',custom_logout_view, name='logout'),
     path('accounts/',include('django.contrib.auth.urls')),
     path('',include('blog_8app.urls')),
 ]

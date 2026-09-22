@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import BlogListView,BlogDetailView,BlogCreateView,BlogUpdateView,BlogDeleteView
+# from .views import custom_logout_view
 
 urlpatterns = [
     path('', BlogListView.as_view(), name='home' ),
@@ -7,4 +8,5 @@ urlpatterns = [
     path('blog/create', BlogCreateView.as_view(), name='blog_create'),
     path('blog/<int:pk>/update/',BlogUpdateView.as_view(), name='blog_update'),
     path('blog/<int:pk>/delete/',BlogDeleteView.as_view(), name='blog_delete'),
+    # path('accounts/logout/',custom_logout_view,name='logout'),
 ]
