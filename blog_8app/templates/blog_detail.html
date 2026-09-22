@@ -1,0 +1,11 @@
+<!--templates/blog_detail.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="blog-entry">
+    <h3><a href="">{{object.title}}</a></h3>
+        <p>{{object.body}}</p>
+</div>
+<h3><a href="{% url 'blog_update' blog.pk %}">+Edit Blog Post</a></h3>
+<h3><a href="{% url 'blog_delete' blog.pk %}">+Delete Blog Post</a></h3>
+{% endblock content %}

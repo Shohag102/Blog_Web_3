@@ -1,0 +1,18 @@
+<!--templates/base.html-->
+{% load static %}
+<html>
+    <head>
+        <title>Django Words</title>
+        <link rel="Stylesheet" href="{% static 'css/blog_8style.css' %}"> 
+    </head>
+    <body>
+        <header>
+            <h2 class="nav-top"><a href="{% url 'home' %}">Django Words</a></h2>
+            <h3><div class="nav-undertop"><a href="{% url 'blog_create' %}">+New Blog Post</a></h3>
+        </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    </body>
+</html>

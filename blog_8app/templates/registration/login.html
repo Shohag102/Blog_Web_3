@@ -1,0 +1,10 @@
+<!--templates/login.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+<h3><a>Log In</a></h3>
+<h3><a><form type = 'post'>{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" value="Login">Log In</button>
+</form></a></h3>
+{% endblock content %}

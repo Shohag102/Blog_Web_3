@@ -1,0 +1,32 @@
+body{
+    margin:0px;
+    border:0px;
+}
+header{
+    border-bottom: 2px solid black;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+header h2 a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: rgb(10, 10, 10);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+h3 a{
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: rgb(9, 9, 71);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(33, 33, 127);
+    display: flex;
+    justify-content: center;
+}
