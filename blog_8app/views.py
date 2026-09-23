@@ -36,4 +36,5 @@ class BlogDeleteView(DeleteView):
 
 def custom_logout_view(request):
     logout(request)
+    # return redirect('home')
     return redirect('login')

@@ -23,5 +23,6 @@ urlpatterns = [
     path('eight/', admin.site.urls),
     path('accounts/logout/',custom_logout_view, name='logout'),
     path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('accounts.urls')), #new #the order of our url matters because Django reads from top to bottom.
     path('',include('blog_8app.urls')),
 ]
